@@ -11,7 +11,19 @@ namespace Assets.Scripts
     {
         public static PlayerManager Instance;
 
-        public SOProduct ProductInHand { get; set; }
+        private SOProduct _productInHand;
+        public SOProduct ProductInHand
+        {
+            get 
+            {
+                return _productInHand;
+            }
+            set
+            {
+                PlayerInventory.Instance.SetProductInHands(value);
+                _productInHand = value;
+            }
+        }
 
         private void Awake()
         {
