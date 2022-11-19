@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e2619034-28e9-4ec8-b832-8cd738793e89}">
+		<property name="name">
+			<value>Amplitude</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5fa7e516-4efa-4811-81ce-d4af709a5d8c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{412e2d1b-ae3b-4831-96d2-fc83a2604798}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{412e2d1b-ae3b-4831-96d2-fc83a2604798}">
+		<property name="isReadOnly">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{ccdbe872-4386-4fd7-a76d-b2f9bda01a78}</destination>
+		</relationship>
+	</object>
+	<object class="SidechainModulator" id="{ccdbe872-4386-4fd7-a76d-b2f9bda01a78}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cursorPosition</value>
+		</property>
+		<property name="amount">
+			<value>100</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{2f1fc006-9e83-4794-895d-0dda1f917c47}</destination>
+			<destination>{5bee0dbc-124e-4aa6-b6f5-d08dbfd04515}</destination>
+			<destination>{0820204b-e2d9-4935-8fa4-c0645480c6eb}</destination>
+			<destination>{681f5e39-5c1b-4204-b0be-242768bc8d95}</destination>
+			<destination>{96231b09-9997-4e37-abd9-495f6085b923}</destination>
+			<destination>{a2264a47-8dd4-428f-8589-9c9198d00e25}</destination>
+			<destination>{7dada8d6-9de7-4224-b54f-58bf7c8474a6}</destination>
+			<destination>{ff4f049b-2626-4189-bdf4-9932d37e3f50}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e8b777d5-10fb-4531-b3d1-cbed5d23c53b}">
+		<property name="assetPath">
+			<value>npc1/npc1_1dobry11.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3846258503401361</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{19657b0f-5188-4419-9928-04580f0c140e}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9882471b-6aee-4c5e-8991-ece0b22027cd}">
+		<property name="assetPath">
+			<value>npc1/npc1_8plz8.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1250113378684807</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{19657b0f-5188-4419-9928-04580f0c140e}</destination>
+		</relationship>
+	</object>
+</objects>
