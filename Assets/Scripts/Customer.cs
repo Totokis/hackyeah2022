@@ -12,11 +12,15 @@ namespace Assets.Scripts
     {
         public Product[] RequestedProducts { get; private set; }
 
+        public OrdersView Orders;
+
         public Single RemainingTime;
 
         private void Start()
         {
             RequestedProducts = OrderManager.Instance.GetOrder();
+            Orders.ShowOrders(RequestedProducts);
+
             RemainingTime = 60f;
 
             StartCoroutine(TimePasses());
