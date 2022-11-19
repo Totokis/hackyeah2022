@@ -11,18 +11,18 @@ namespace Assets.Scripts
     {
         public Product[] RequestedProducts { get; private set; }
 
+        public Single RemainingTime;
+
         private void Start()
         {
-            for(int i = 0; i < 100; i++)
-            {
-                RequestedProducts = OrderManager.Instance.GetOrder();
+            RequestedProducts = OrderManager.Instance.GetOrder();
+            RemainingTime = 60f;
 
-                #region TEST
-                String logText = "Generated products: ";
-                foreach (var product in RequestedProducts)
-                    logText += $"{product.ToString()} ";
-                Debug.Log(logText);
-            }
+            #region TEST
+            //String logText = "Generated products: ";
+            //foreach (var product in RequestedProducts)
+            //    logText += $"{product.ToString()} ";
+            //Debug.Log(logText);
             #endregion TEST
         }
 
