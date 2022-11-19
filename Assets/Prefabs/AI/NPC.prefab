@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 5914767203364538151}
   - component: {fileID: 5914767203364538150}
   - component: {fileID: 946746980440481822}
+  - component: {fileID: 5769856253961787998}
   - component: {fileID: 385104647460984745}
   m_Layer: 0
   m_Name: NPC
@@ -144,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2eefc34d9e82e4d9b49fa7d3808999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Customer: {fileID: 0}
 --- !u!114 &946746980440481822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +160,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 100
   moveSpeed: 1
+--- !u!114 &5769856253961787998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914767203364538152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0fa6edaf4ed9547bbe7a2e75bbe418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Orders: {fileID: 0}
+  NPC: {fileID: 0}
+  RemainingTime: 0
 --- !u!195 &385104647460984745
 NavMeshAgent:
   m_ObjectHideFlags: 0
