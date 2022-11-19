@@ -8,7 +8,7 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class SOProduct : ScriptableObject
 {
-    public Sprite Icon;
     public GameObject Prefab;
+    public GameObject PrefabInHand;
     public String Audio;
 }
