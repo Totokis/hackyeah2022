@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using Product = Assets.Scripts.Product;
 
 public class ProductOrderView : MonoBehaviour
 {
@@ -12,7 +11,7 @@ public class ProductOrderView : MonoBehaviour
     public Sprite FishIcon;
     public Sprite BeerIcon;
 
-    public void Init(Product prod)
+    public void Init(ProductKind prod)
     {
         
         switch(prod)
