@@ -11,19 +11,24 @@ public class OrderManager : MonoBehaviour
     public Single MinItemsPerCustomer = 1f;
     public Single DifficultyRaiseSpeed = 0.1f;
 
-    private static OrderManager _instance = null;
-    public static OrderManager Instance
+    private Single CurrentItemsApproxPerCustomer;
+
+    public static OrderManager Instance;
+
+    private void Awake()
     {
-        get
-        {
-            if (_instance == null)
-                _instance = new OrderManager();
-            return _instance;
-        }
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+
+        DontDestroyOnLoad(Instance);
     }
 
     public void Start()
     {
+        CurrentItemsApproxPerCustomer = MinItemsPerCustomer;
+
         #region TEST
 
         #endregion TEST
@@ -33,10 +38,19 @@ public class OrderManager : MonoBehaviour
     {
         List<Product> products = new List<Product>();
 
+        //itemki z zakresu (x, x+1)
+        CurrentItemsApproxPerCustomer += DifficultyRaiseSpeed;
+        Int32 realMin = (Int32)Math.Floor(CurrentItemsApproxPerCustomer);
+        Int32 realMax = (Int32)Math.Floor(CurrentItemsApproxPerCustomer + 1f);
+
+        if (realMin > MaxItemsPerCustomer - 1)
+            realMin = (Int32)MaxItemsPerCustomer - 1;
+
+        if (realMax > MaxItemsPerCustomer)
+            realMax = (Int32)MaxItemsPerCustomer;
+
         //losuje iloœæ itemków
-        Int32 numberOfItems = Convert.ToInt32(Random.Range(MinItemsPerCustomer, MaxItemsPerCustomer));
-        if (MinItemsPerCustomer < MaxItemsPerCustomer - 1)
-            MinItemsPerCustomer += DifficultyRaiseSpeed;
+        Int32 numberOfItems = Convert.ToInt32(Random.Range(realMin, realMax));
 
         //losuje konkretne taski
         for (int i = 0; i < numberOfItems; i++)
