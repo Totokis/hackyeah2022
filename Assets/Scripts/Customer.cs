@@ -53,6 +53,28 @@ namespace Assets.Scripts
         private void Leave()
         {
             Debug.Log("Customer leaves");
+            NPC.CustomerFinished(false);
+        }
+
+        private void OnGotOrder(ProductKind[] products)
+        {
+            if(products.Length != RequestedProducts.Length)
+                NPC.CustomerFinished(false);
+            else
+            {
+                ProductKind[] allProducts = (ProductKind[])Enum.GetValues(typeof(ProductKind));
+
+                foreach(var potentialProduct in allProducts)
+                {
+                    if(products.Where(pro => pro == potentialProduct).ToArray().Length != RequestedProducts.Where(pro => pro == potentialProduct).ToArray().Length)
+                    {
+                        NPC.CustomerFinished(false);
+                        return;
+                    }
+                }
+
+                NPC.CustomerFinished(true);
+            }
         }
 
         public void Init(NPC npc)
