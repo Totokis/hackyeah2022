@@ -28,7 +28,10 @@ public class OrdersView : MonoBehaviour
 
     internal void CompleteOrder()
     {
-
+        for (int i = 0; i < _orderProductViews.Count; i++)
+        {
+            GameObject.Destroy(_orderProductViews[i]);
+        }
     }
 
     // Start is called before the first frame update
