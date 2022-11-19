@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExampleInteraction : MonoBehaviour, IInteractionTarget
 {
     private bool canInteract = true;
+
     public void Interact()
     {
         if (!canInteract)
