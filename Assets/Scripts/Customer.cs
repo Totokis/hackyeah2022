@@ -13,6 +13,8 @@ namespace Assets.Scripts
     {
         public ProductKind[] RequestedProducts { get; private set; }
 
+        private Action<Boolean> OnFinish;
+
         public OrdersView Orders;
 
         public NPC NPC;
@@ -34,8 +36,9 @@ namespace Assets.Scripts
             #endregion TEST
         }
 
-        public  void OnStartWaiting()
+        public  void OnStartWaiting(Action<Boolean> onFinish)
         {
+            OnFinish = onFinish;
             StartCoroutine(TimePasses());
         }
 
@@ -53,13 +56,13 @@ namespace Assets.Scripts
         private void Leave()
         {
             Debug.Log("Customer leaves");
-            NPC.CustomerFinished(false);
+            OnFinish.Invoke(false);
         }
 
-        private void OnGotOrder(ProductKind[] products)
+        public void OnGotOrder(ProductKind[] products)
         {
             if(products.Length != RequestedProducts.Length)
-                NPC.CustomerFinished(false);
+                OnFinish.Invoke(false);
             else
             {
                 ProductKind[] allProducts = (ProductKind[])Enum.GetValues(typeof(ProductKind));
@@ -68,12 +71,12 @@ namespace Assets.Scripts
                 {
                     if(products.Where(pro => pro == potentialProduct).ToArray().Length != RequestedProducts.Where(pro => pro == potentialProduct).ToArray().Length)
                     {
-                        NPC.CustomerFinished(false);
+                        OnFinish.Invoke(false);
                         return;
                     }
                 }
 
-                NPC.CustomerFinished(true);
+                OnFinish.Invoke(true);
             }
         }
 

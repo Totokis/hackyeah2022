@@ -92,7 +92,7 @@ public class Queue : MonoBehaviour
         {
             if (NPCsInQueue[0] == npc)
             {
-                npc.Customer.OnStartWaiting();
+                npc.Customer.OnStartWaiting(OnOrderCompleted);
             }
         }
     }
