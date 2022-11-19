@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using Product = Assets.Scripts.Product;
 
 public class OrdersView : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class OrdersView : MonoBehaviour
 
     internal void ShowOrders(ProductKind[] requestedProducts)
     {
-        foreach(Product product in requestedProducts)
+        foreach(ProductKind product in requestedProducts)
         {
             GameObject spawned = Instantiate(objOneOrderView, trGridParent);
             //spawned.GetComponent<Order>
