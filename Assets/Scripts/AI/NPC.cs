@@ -32,6 +32,11 @@ public class NPC : MonoBehaviour
         Debug.Log($"SetState({name}, {state})");
         OnStateChanged?.Invoke(this, state);
     }
+
+    public void CustomerFinished(Boolean isSuccess)
+    {
+
+    }
 }
 
 public interface INPCReference

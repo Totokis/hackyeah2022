@@ -53,6 +53,25 @@ namespace Assets.Scripts
         private void Leave()
         {
             Debug.Log("Customer leaves");
+            NPC.CustomerFinished(false);
+        }
+
+        private void OnGotOrder(ProductKind[] products)
+        {
+            if(products.Length != RequestedProducts.Length)
+                NPC.CustomerFinished(false);
+            else
+            {
+                for(int i = 0; i < products.Length; i++)
+                {
+                    if(products[i] != RequestedProducts[i])
+                    {
+                        NPC.CustomerFinished(false);
+                        break;
+                    }
+                    NPC.CustomerFinished(true);
+                }
+            }
         }
 
         public void Init(NPC npc)
