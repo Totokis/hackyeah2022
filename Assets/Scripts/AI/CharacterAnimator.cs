@@ -13,20 +13,12 @@ public class CharacterAnimator : MonoBehaviour
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
-        _meshes = GetComponentsInChildren<Renderer>();
     }
 
-    public void UpdateAnimator(Vector3 velocity)
+    public void UpdateAnimator(Vector3 velocity, float angle)
     {
         _animator.SetFloat("Vertical", velocity.z, _dampTime, Time.deltaTime);
-        _animator.SetFloat("Horizontal", velocity.x, _dampTime, Time.deltaTime);
-    }
-
-    public void ToggleMeshesVisibility(bool toggle)
-    {
-        foreach(var mesh in _meshes)
-        {
-            mesh.shadowCastingMode = (toggle) ? ShadowCastingMode.On : ShadowCastingMode.ShadowsOnly;
-        }
+        //_animator.SetFloat("Horizontal", velocity.x, _dampTime, Time.deltaTime);
+        _animator.SetFloat("Horizontal", angle, _dampTime, Time.deltaTime);
     }
 }

@@ -28,7 +28,7 @@ public class MallDummyAI : MonoBehaviour
     void Update()
     {
         _localVelocity = transform.InverseTransformDirection(_agent.velocity);
-        _characterAnimator.UpdateAnimator(_localVelocity);
+        _characterAnimator.UpdateAnimator(_localVelocity, 0);
     }
 
     async UniTask CheckDistance()

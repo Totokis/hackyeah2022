@@ -1,11 +1,4 @@
-using Cysharp.Threading.Tasks.Triggers;
-using JetBrains.Annotations;
-using System.Buffers;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Collections.LowLevel.Unsafe;
-using Unity.VisualScripting;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 
@@ -20,13 +13,16 @@ public class NPCMovement : MonoBehaviour, INPCReference
 
     private NPC npc;
     private NavMeshAgent agent;
+    private CharacterAnimator _characterAnimator;
 
     public void Init(NPC npc)
     {
         this.npc = npc;
 
         agent = GetComponent<NavMeshAgent>();
+        _characterAnimator= GetComponent<CharacterAnimator>();
     }
+
 
     public void Warp(Vector3 position)
     {
@@ -70,5 +66,9 @@ public class NPCMovement : MonoBehaviour, INPCReference
 
         var direction = (targetPosition - transform.position).normalized;
         transform.forward = Vector3.Lerp(transform.forward, direction, Time.deltaTime * rotateSpeed);
+
+        //TODO - OGARNIJ KURWA KTÓRA TO BYŁA OŚ XD
+        //float angle = Vector3.SignedAngle(agent.velocity.normalized, agent.desiredVelocity.normalized,)
+        _characterAnimator.UpdateAnimator(transform.InverseTransformDirection(agent.velocity), 0);
     }
 }
