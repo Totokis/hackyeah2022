@@ -8,34 +8,20 @@ public class ProductOrderView : MonoBehaviour
 {
     public SpriteRenderer sprIcon;
 
-    public Sprite FishIcon;
-    public Sprite BeerIcon;
-
-    public void Init(ProductKind prod)
+    public void Init(SOProduct prod)
     {
-        
-        switch(prod)
-        {
-            case ProductKind.Fish:
-                sprIcon.sprite = FishIcon;
-                break;
-            case ProductKind.Beer:
-                sprIcon.sprite = BeerIcon;
-                break;
-        }
-
-
+        //sprIcon.sprite = prod.Icon;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

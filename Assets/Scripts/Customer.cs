@@ -11,7 +11,10 @@ namespace Assets.Scripts
 {
     public class Customer : MonoBehaviour, INPCReference
     {
-        public ProductKind[] RequestedProducts { get; private set; }
+        public SOProduct[] RequestedProducts { get; private set; }
+        public SOProductGroup AllProducts { get; private set; }
+
+        private Action<Boolean> OnFinish;
 
         public OrdersView Orders;
 
@@ -22,7 +25,7 @@ namespace Assets.Scripts
         private void Start()
         {
             RequestedProducts = OrderManager.Instance.GetOrder();
-            Orders.ShowOrders(RequestedProducts);
+            //Orders.ShowOrders(RequestedProducts);
 
             RemainingTime = 60f;
 
@@ -34,8 +37,9 @@ namespace Assets.Scripts
             #endregion TEST
         }
 
-        public  void OnStartWaiting()
+        public void OnStartWaiting(Action<Boolean> onFinish)
         {
+            OnFinish = onFinish;
             StartCoroutine(TimePasses());
         }
 
@@ -53,6 +57,26 @@ namespace Assets.Scripts
         private void Leave()
         {
             Debug.Log("Customer leaves");
+            OnFinish.Invoke(false);
+        }
+
+        public void OnGotOrder(SOProduct[] products)
+        {
+            if (products.Length != RequestedProducts.Length)
+                OnFinish.Invoke(false);
+            else
+            {
+                foreach (var potentialProduct in AllProducts.Products)
+                {
+                    if (products.Where(pro => pro == potentialProduct).ToArray().Length != RequestedProducts.Where(pro => pro == potentialProduct).ToArray().Length)
+                    {
+                        OnFinish.Invoke(false);
+                        return;
+                    }
+                }
+
+                OnFinish.Invoke(true);
+            }
         }
 
         public void Init(NPC npc)

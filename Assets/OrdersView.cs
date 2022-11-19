@@ -13,9 +13,9 @@ public class OrdersView : MonoBehaviour
 
     private List<GameObject> _orderProductViews = new List<GameObject>();
 
-    internal void ShowOrders(ProductKind[] requestedProducts)
+    internal void ShowOrders(SOProduct[] requestedProducts)
     {
-        foreach(ProductKind product in requestedProducts)
+        foreach(SOProduct product in requestedProducts)
         {
             GameObject spawned = Instantiate(objOneOrderView, trGridParent);
             //spawned.GetComponent<Order>

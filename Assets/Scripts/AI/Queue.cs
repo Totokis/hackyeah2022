@@ -32,8 +32,15 @@ public class Queue : MonoBehaviour
         {
             if (NPCsInQueue.Count > 0)
             {
-                NPCsInQueue.RemoveAt(0);
-                UpdateWaypoints();
+                OnOrderCompleted(true);
+            }
+        }
+
+        if (Keyboard.current.numpad2Key.wasPressedThisFrame)
+        {
+            if (NPCsInQueue.Count > 0)
+            {
+                OnOrderCompleted(false);
             }
         }
     }
@@ -85,8 +92,43 @@ public class Queue : MonoBehaviour
         {
             if (NPCsInQueue[0] == npc)
             {
-                npc.Customer.OnStartWaiting();
+                npc.Customer.OnStartWaiting(OnOrderCompleted);
             }
         }
+    }
+
+    private void OnOrderCompleted(bool success)
+    {
+        if (success)
+        {
+            NPCsInQueue[0].Movement.GoToWaypoint(Party.Instance.GetEmptyWaypoint());
+
+            var count = Random.Range(0, 4);
+
+            for (int i = 0; i < count; i++)
+            {
+                var npc = NPCManager.Instance.GetNPCWithState(NPCState.available);
+
+                if (npc)
+                    npc.Movement.GoToWaypoint(Party.Instance.GetEmptyWaypoint());
+            }
+        }
+        else
+        {
+            NPCsInQueue[0].Movement.GoToPosition(new Vector3(48, 0, 48));
+
+            var count = Random.Range(0, 4);
+
+            for (int i = 0; i < count; i++)
+            {
+                var npc = NPCManager.Instance.GetNPCWithState(NPCState.onParty);
+
+                if (npc)
+                    npc.Movement.GoToPosition(new Vector3(48, 0, 48));
+            }
+        }
+
+        NPCsInQueue.RemoveAt(0);
+        UpdateWaypoints();
     }
 }
