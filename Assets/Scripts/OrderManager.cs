@@ -50,7 +50,7 @@ public class OrderManager : MonoBehaviour
             realMax = (Int32)MaxItemsPerCustomer;
 
         //losuje iloœæ itemków
-        Int32 numberOfItems = Convert.ToInt32(Random.Range(realMin, realMax));
+        Int32 numberOfItems = Convert.ToInt32(Random.Range(realMin, realMax + 1));
 
         //losuje konkretne taski
         for (int i = 0; i < numberOfItems; i++)
