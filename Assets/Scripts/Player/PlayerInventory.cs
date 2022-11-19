@@ -22,6 +22,12 @@ public class PlayerInventory : MonoBehaviour
         ProductInHands = product;
         OnProductInHandsChanged?.Invoke(product);
 
-        Instantiate(product.PrefabInHand, trItemInHandParent);
+        GameObject spawned = Instantiate(product.PrefabInHand, trItemInHandParent);
+        for (int i = 0; i < spawned.transform.childCount; i++)
+        {
+            Transform Go = spawned.transform.GetChild(i);
+            Go.gameObject.layer = LayerMask.NameToLayer("ItemInHand");
+        }
+
     }
 }
