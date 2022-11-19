@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,12 +8,14 @@ public class NPC : MonoBehaviour
 {
     public static event Action<NPC, NPCState> OnStateChanged;
 
+    public Customer Customer;
     public NPCMovement Movement { get; private set; }
 
     public NPCState State { get; private set; } = NPCState.available;
 
     public void Init()
     {
+        Customer = GetReference<Customer>();
         Movement = GetReference<NPCMovement>();
     }
 

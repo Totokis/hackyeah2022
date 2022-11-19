@@ -85,7 +85,7 @@ public class Queue : MonoBehaviour
         {
             if (NPCsInQueue[0] == npc)
             {
-                //START ORDER;
+                npc.Customer.OnStartWaiting();
             }
         }
     }

@@ -9,11 +9,13 @@ using UnityEngine.Events;
 
 namespace Assets.Scripts
 {
-    class Customer : MonoBehaviour
+    public class Customer : MonoBehaviour, INPCReference
     {
         public ProductKind[] RequestedProducts { get; private set; }
 
         public OrdersView Orders;
+
+        public NPC NPC;
 
         public Single RemainingTime;
 
@@ -51,6 +53,11 @@ namespace Assets.Scripts
         private void Leave()
         {
             Debug.Log("Customer leaves");
+        }
+
+        public void Init(NPC npc)
+        {
+            this.NPC = npc;
         }
     }
 }
