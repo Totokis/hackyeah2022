@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectProduct : MonoBehaviour, IInteractionTarget
+public class CollectProduct : MonoBehaviour, IInteractionTarget, IInteractionHover
 {
     [SerializeField] private SOProduct product;
 
@@ -26,5 +26,15 @@ public class CollectProduct : MonoBehaviour, IInteractionTarget
         LeanTween.scale(gameObject, startScale * 1.2f, 0.1f).setLoopPingPong(1).setOnComplete(() => canInteract = true);
 
         PlayerInventory.Instance.SetProductInHands(product);
+    }
+
+    public void OnHoverEnter()
+    {
+
+    }
+
+    public void OnHoverExit()
+    {
+        canInteract = true;
     }
 }
