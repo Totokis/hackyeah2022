@@ -20,7 +20,7 @@ public class PointManager : MonoBehaviour
         DontDestroyOnLoad(Instance);
     }
 
-    private void OnOrderCompleted(Product[] products)
+    private void OnOrderCompleted(ProductKind[] products)
     {
         Single basicPoints = products.Length * 10;
         CorrectInRow += 1;
@@ -34,7 +34,7 @@ public class PointManager : MonoBehaviour
             Points += basicPoints;
     }
 
-    private void OnOrderFailed(Product[] products)
+    private void OnOrderFailed(ProductKind[] products)
     {
         CorrectInRow = 0;
     }

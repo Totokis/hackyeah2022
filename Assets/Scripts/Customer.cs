@@ -11,7 +11,7 @@ namespace Assets.Scripts
 {
     class Customer : MonoBehaviour
     {
-        public Product[] RequestedProducts { get; private set; }
+        public ProductKind[] RequestedProducts { get; private set; }
 
         public OrdersView Orders;
 

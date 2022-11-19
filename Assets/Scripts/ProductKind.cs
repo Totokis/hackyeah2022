@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts
 {
-    public enum Product
+    public enum ProductKind
     {
         Fish = 0,
-        Beer = 1
+        Beer = 1,
+        Wine = 2
     }
 }
