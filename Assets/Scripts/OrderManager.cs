@@ -34,9 +34,9 @@ public class OrderManager : MonoBehaviour
         #endregion TEST
     }
 
-    public Product[] GetOrder()
+    public ProductKind[] GetOrder()
     {
-        List<Product> products = new List<Product>();
+        List<ProductKind> products = new List<ProductKind>();
 
         //itemki z zakresu (x, x+1)
         CurrentItemsApproxPerCustomer += DifficultyRaiseSpeed;
@@ -55,9 +55,9 @@ public class OrderManager : MonoBehaviour
         //losuje konkretne taski
         for (int i = 0; i < numberOfItems; i++)
         {
-            Product[] allProducts = (Product[])Enum.GetValues(typeof(Product));
+            ProductKind[] allProducts = (ProductKind[])Enum.GetValues(typeof(ProductKind));
             Int32 randomedItemIndex = Random.Range(0, allProducts.Length);
-            Product newProduct = allProducts[randomedItemIndex];
+            ProductKind newProduct = allProducts[randomedItemIndex];
             products.Add(newProduct);
         }
 
