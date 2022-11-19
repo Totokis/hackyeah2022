@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class OrderManager : MonoBehaviour
 {
-    public SOProductGroup AllProducts { get; private set; }
+    [field:SerializeField] public SOProductGroup AllProducts { get; private set; }
 
     public Single MaxItemsPerCustomer = 5f;
     public Single MinItemsPerCustomer = 1f;

@@ -25,7 +25,7 @@ namespace Assets.Scripts
         private void Start()
         {
             RequestedProducts = OrderManager.Instance.GetOrder();
-            Orders.ShowOrders(RequestedProducts);
+            //Orders.ShowOrders(RequestedProducts);
 
             RemainingTime = 60f;
 
