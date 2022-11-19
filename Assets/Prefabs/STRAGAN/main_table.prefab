@@ -604,7 +604,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3211868199686055433}
-  m_LocalRotation: {x: 0.0039126244, y: 0.26308635, z: 0.014346409, w: 0.9646577}
+  m_LocalRotation: {x: 0.003912428, y: 0.2630863, z: 0.014345688, w: 0.9646577}
   m_LocalPosition: {x: -0.83800125, y: 0.18900001, z: -0.95900345}
   m_LocalScale: {x: 0.32000002, y: 0.32, z: 0.32000002}
   m_ConstrainProportionsScale: 1
@@ -641,6 +641,9 @@ GameObject:
   - component: {fileID: 5674677983831040184}
   - component: {fileID: 6189293632493747315}
   - component: {fileID: 6090753560394641958}
+  - component: {fileID: 593316745}
+  - component: {fileID: 593316746}
+  - component: {fileID: 593316747}
   m_Layer: 0
   m_Name: Cube.003
   m_TagString: Untagged
@@ -713,6 +716,46 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &593316745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359981868151322409}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.014669627, y: 0.010600644, z: 0.0016458057}
+  m_Center: {x: 0.000000028638086, y: -1.6673484e-13, z: 0.00017884199}
+--- !u!114 &593316746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359981868151322409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e396ff5c32f964ab905b47fed93c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &593316747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359981868151322409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bc22e6b8a70894396875b6e9c38bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterScale: {x: 110, y: 110, z: 110}
+  exitScale: {x: 100, y: 100, z: 100}
+  time: 0.1
 --- !u!1 &4372476156847667155
 GameObject:
   m_ObjectHideFlags: 0
