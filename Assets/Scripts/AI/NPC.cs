@@ -29,7 +29,6 @@ public class NPC : MonoBehaviour
     {
         State = state;
 
-        Debug.Log($"SetState({name}, {state})");
         OnStateChanged?.Invoke(this, state);
     }
 }

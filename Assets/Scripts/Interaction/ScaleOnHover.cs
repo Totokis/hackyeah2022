@@ -13,14 +13,12 @@ public class ScaleOnHover : MonoBehaviour, IInteractionHover
 
     public void OnHoverEnter()
     {
-        Debug.Log("OnHoverEnter");
         LeanTween.cancel(gameObject);
         LeanTween.scale(gameObject, enterScale, time);
     }
 
     public void OnHoverExit()
     {
-        Debug.Log("OnHoverExit");
         LeanTween.cancel(gameObject);
         LeanTween.scale(gameObject, exitScale, time);
     }
