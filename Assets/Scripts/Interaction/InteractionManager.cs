@@ -53,14 +53,3 @@ public class InteractionManager : MonoBehaviour
         hover = null;
     }
 }
-
-public interface IInteractionTarget
-{
-    public void Interact();
-}
-
-public interface IInteractionHover
-{
-    public void OnHoverEnter();
-    public void OnHoverExit();
-}
