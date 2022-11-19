@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts
 {
@@ -20,7 +21,7 @@ namespace Assets.Scripts
             RemainingTime = 60f;
 
             StartCoroutine(TimePasses());
-
+            
             #region TEST
             //String logText = "Generated products: ";
             //foreach (var product in RequestedProducts)
@@ -44,6 +45,5 @@ namespace Assets.Scripts
         {
             Debug.Log("Customer leaves");
         }
-
     }
 }
