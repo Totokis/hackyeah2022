@@ -22,7 +22,6 @@ public class OrdersView : MonoBehaviour
             spawned.GetComponent<ProductOrderView>().Init(product);
             _orderProductViews.Add(spawned);
         }
-
     }
 
     internal void CompleteOrder()

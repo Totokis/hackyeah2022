@@ -24,14 +24,17 @@ namespace Assets.Scripts
 
             RemainingTime = 60f;
 
-            StartCoroutine(TimePasses());
-            
             #region TEST
             //String logText = "Generated products: ";
             //foreach (var product in RequestedProducts)
             //    logText += $"{product.ToString()} ";
             //Debug.Log(logText);
             #endregion TEST
+        }
+
+        public  void OnStartWaiting()
+        {
+            StartCoroutine(TimePasses());
         }
 
         private IEnumerator TimePasses()
