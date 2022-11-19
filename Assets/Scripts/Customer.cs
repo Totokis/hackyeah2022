@@ -62,15 +62,18 @@ namespace Assets.Scripts
                 NPC.CustomerFinished(false);
             else
             {
-                for(int i = 0; i < products.Length; i++)
+                ProductKind[] allProducts = (ProductKind[])Enum.GetValues(typeof(ProductKind));
+
+                foreach(var potentialProduct in allProducts)
                 {
-                    if(products[i] != RequestedProducts[i])
+                    if(products.Where(pro => pro == potentialProduct).ToArray().Length != RequestedProducts.Where(pro => pro == potentialProduct).ToArray().Length)
                     {
                         NPC.CustomerFinished(false);
-                        break;
+                        return;
                     }
-                    NPC.CustomerFinished(true);
                 }
+
+                NPC.CustomerFinished(true);
             }
         }
 

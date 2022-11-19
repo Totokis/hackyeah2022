@@ -8,8 +8,8 @@ namespace Assets.Scripts
 {
     public enum ProductKind
     {
-        Fish = 0,
-        Beer = 1,
-        Wine = 2
+        Fish = 1,
+        Beer = 2,
+        Wine = 4
     }
 }
