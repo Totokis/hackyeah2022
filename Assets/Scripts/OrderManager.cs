@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 public class OrderManager : MonoBehaviour
 {
+    public SOProductGroup AllProducts { get; private set; }
+
     public Single MaxItemsPerCustomer = 5f;
     public Single MinItemsPerCustomer = 1f;
     public Single DifficultyRaiseSpeed = 0.1f;
@@ -34,9 +36,9 @@ public class OrderManager : MonoBehaviour
         #endregion TEST
     }
 
-    public ProductKind[] GetOrder()
+    public SOProduct[] GetOrder()
     {
-        List<ProductKind> products = new List<ProductKind>();
+        List<SOProduct> products = new List<SOProduct>();
 
         //itemki z zakresu (x, x+1)
         CurrentItemsApproxPerCustomer += DifficultyRaiseSpeed;
@@ -55,9 +57,8 @@ public class OrderManager : MonoBehaviour
         //losuje konkretne taski
         for (int i = 0; i < numberOfItems; i++)
         {
-            ProductKind[] allProducts = (ProductKind[])Enum.GetValues(typeof(ProductKind));
-            Int32 randomedItemIndex = Random.Range(0, allProducts.Length);
-            ProductKind newProduct = allProducts[randomedItemIndex];
+            Int32 randomedItemIndex = Random.Range(0, AllProducts.Products.Length);
+            SOProduct newProduct = AllProducts.Products[randomedItemIndex];
             products.Add(newProduct);
         }
 

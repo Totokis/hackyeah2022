@@ -11,7 +11,8 @@ namespace Assets.Scripts
 {
     public class Customer : MonoBehaviour, INPCReference
     {
-        public ProductKind[] RequestedProducts { get; private set; }
+        public SOProduct[] RequestedProducts { get; private set; }
+        public SOProductGroup AllProducts { get; private set; }
 
         private Action<Boolean> OnFinish;
 
@@ -36,7 +37,7 @@ namespace Assets.Scripts
             #endregion TEST
         }
 
-        public  void OnStartWaiting(Action<Boolean> onFinish)
+        public void OnStartWaiting(Action<Boolean> onFinish)
         {
             OnFinish = onFinish;
             StartCoroutine(TimePasses());
@@ -59,17 +60,15 @@ namespace Assets.Scripts
             OnFinish.Invoke(false);
         }
 
-        public void OnGotOrder(ProductKind[] products)
+        public void OnGotOrder(SOProduct[] products)
         {
-            if(products.Length != RequestedProducts.Length)
+            if (products.Length != RequestedProducts.Length)
                 OnFinish.Invoke(false);
             else
             {
-                ProductKind[] allProducts = (ProductKind[])Enum.GetValues(typeof(ProductKind));
-
-                foreach(var potentialProduct in allProducts)
+                foreach (var potentialProduct in AllProducts.Products)
                 {
-                    if(products.Where(pro => pro == potentialProduct).ToArray().Length != RequestedProducts.Where(pro => pro == potentialProduct).ToArray().Length)
+                    if (products.Where(pro => pro == potentialProduct).ToArray().Length != RequestedProducts.Where(pro => pro == potentialProduct).ToArray().Length)
                     {
                         OnFinish.Invoke(false);
                         return;
