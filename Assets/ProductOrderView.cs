@@ -10,7 +10,7 @@ public class ProductOrderView : MonoBehaviour
 
     public void Init(SOProduct prod)
     {
-        sprIcon.sprite = prod.Icon;
+        //sprIcon.sprite = prod.Icon;
     }
 
     // Start is called before the first frame update
