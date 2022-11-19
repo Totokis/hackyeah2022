@@ -627,7 +627,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1de5deb6e144848ad441b30de88d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 0}
+  dayValue: 0
+  lightMaxRotationY: 0
+  lightMaxRotationX: 0
+  skyboxRotationMaxValue: 0
+  light: {fileID: 713557151}
+  skybox: {fileID: 2100000, guid: 4f11c770ac58b0a4bb0243fab5bd96a1, type: 2}
 --- !u!4 &378205750
 Transform:
   m_ObjectHideFlags: 0
