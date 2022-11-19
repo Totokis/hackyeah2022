@@ -17,10 +17,10 @@ public class ProductOrderView : MonoBehaviour
         
         switch(prod)
         {
-            case Product.Fish:
+            case ProductKind.Fish:
                 sprIcon.sprite = FishIcon;
                 break;
-            case Product.Beer:
+            case ProductKind.Beer:
                 sprIcon.sprite = BeerIcon;
                 break;
         }

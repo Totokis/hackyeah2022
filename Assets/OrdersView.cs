@@ -14,7 +14,7 @@ public class OrdersView : MonoBehaviour
 
     private List<GameObject> _orderProductViews = new List<GameObject>();
 
-    internal void ShowOrders(Product[] requestedProducts)
+    internal void ShowOrders(ProductKind[] requestedProducts)
     {
         foreach(Product product in requestedProducts)
         {
