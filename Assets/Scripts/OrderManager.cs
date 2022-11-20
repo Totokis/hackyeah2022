@@ -9,6 +9,7 @@ public class OrderManager : MonoBehaviour
 {
     [field:SerializeField] public SOProductGroup AllProducts { get; private set; }
 
+
     public Single MaxItemsPerCustomer = 5f;
     public Single MinItemsPerCustomer = 1f;
     public Single DifficultyRaiseSpeed = 0.1f;
@@ -57,7 +58,7 @@ public class OrderManager : MonoBehaviour
         //losuje konkretne taski
         for (int i = 0; i < numberOfItems; i++)
         {
-            Int32 randomedItemIndex = Random.Range(0, AllProducts.Products.Length);
+            Int32 randomedItemIndex = Random.Range(0, AllProducts.Products.Length-2);
             SOProduct newProduct = AllProducts.Products[randomedItemIndex];
             products.Add(newProduct);
         }
