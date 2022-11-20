@@ -11,6 +11,7 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private float distance = 5;
 
     IInteractionTarget target;
+    IInteractionTargetG targetG;
     IInteractionHover[] hovers = new IInteractionHover[0];
 
     void Update()
@@ -28,10 +29,28 @@ public class InteractionManager : MonoBehaviour
                     hovers = hit.transform.GetComponents<IInteractionHover>();
                     CallOnHoverEnter();
                 }
-
-                if (Keyboard.current.eKey.wasPressedThisFrame)
+            }
+            if (hit.transform.TryGetComponent<IInteractionTargetG>(out var newTargetG))
+            {
+                //G
+                if (Keyboard.current.gKey.wasPressedThisFrame)
                 {
-                    target.Interact();
+                    targetG.InteractG();
+                }
+
+                if (targetG != newTargetG)
+                {
+                    //CallOnHoverExit();
+
+                    targetG = newTargetG;
+
+                    //hovers = hit.transform.GetComponents<IInteractionHoverG>();
+                    //CallOnHoverEnter();
+                }
+
+                if (Keyboard.current.gKey.wasPressedThisFrame)
+                {
+                    targetG.InteractG();
                 }
             }
             else
