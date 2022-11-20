@@ -9,6 +9,7 @@ public class PlayerInventory : MonoBehaviour
     public event System.Action<SOProduct> OnProductInHandsChanged;
 
     public SOProduct ProductInHands { get; private set; }
+    public GameObject ProductInScene { get; private set; }
 
     public Transform trItemInHandParent;
 
@@ -19,13 +20,17 @@ public class PlayerInventory : MonoBehaviour
 
     public void SetProductInHands(SOProduct product)
     {
+        if (ProductInScene != null)
+            Destroy(ProductInScene);
+
         ProductInHands = product;
         OnProductInHandsChanged?.Invoke(product);
 
-        GameObject spawned = Instantiate(product.PrefabInHand, trItemInHandParent);
-        for (int i = 0; i < spawned.transform.childCount; i++)
+        ProductInScene = Instantiate(product.PrefabInHand, trItemInHandParent);
+
+        for (int i = 0; i < ProductInScene.transform.childCount; i++)
         {
-            Transform Go = spawned.transform.GetChild(i);
+            Transform Go = ProductInScene.transform.GetChild(i);
             Go.gameObject.layer = LayerMask.NameToLayer("ItemInHand");
         }
 
