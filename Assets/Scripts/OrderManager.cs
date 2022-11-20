@@ -55,6 +55,9 @@ public class OrderManager : MonoBehaviour
         //losuje ilo�� itemk�w
         Int32 numberOfItems = Convert.ToInt32(Random.Range(realMin, realMax + 1));
 
+        if (numberOfItems == 0)
+            numberOfItems = 1;
+
         //losuje konkretne taski
         for (int i = 0; i < numberOfItems; i++)
         {
