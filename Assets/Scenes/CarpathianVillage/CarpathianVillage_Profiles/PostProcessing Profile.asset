@@ -65,10 +65,10 @@ MonoBehaviour:
     value: 0.63
   aperture:
     overrideState: 1
-    value: 32
+    value: 18.3
   focalLength:
     overrideState: 1
-    value: 62
+    value: 40
   kernelSize:
     overrideState: 1
     value: 1
