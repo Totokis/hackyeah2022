@@ -115,7 +115,7 @@ public class Queue : MonoBehaviour
         }
         else
         {
-            NPCsInQueue[0].Movement.GoToPosition(new Vector3(48, 0, 48));
+            NPCsInQueue[0].Movement.GoToPosition(new Vector3(13.7f, 0, -8.3f));
 
             var count = Random.Range(0, 4);
 
