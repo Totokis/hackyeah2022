@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5164458, g: 0.29548424, b: 0.26724002, a: 1}
+  m_IndirectSpecularColor: {r: 0.38699615, g: 0.08235583, b: 0.057147287, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -628,9 +628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayValue: 0
-  lightMaxRotationY: 0
-  lightMaxRotationX: 0
-  skyboxRotationMaxValue: 0
+  lightTargetRotationY: 0
+  lightTargetRotationX: 0
+  skyboxRotationTargetValue: 0
   light: {fileID: 713557151}
   skybox: {fileID: 2100000, guid: 4f11c770ac58b0a4bb0243fab5bd96a1, type: 2}
 --- !u!4 &378205750

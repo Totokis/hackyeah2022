@@ -58,6 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d3d31e2423c7e40ae7a4648e6a1b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soFullFish: {fileID: 11400000, guid: 78da6131e2239dd4198fb153da514ad5, type: 2}
+  soFish: {fileID: 11400000, guid: f35d1bfb2d0644f438f5fbfe66071c9e, type: 2}
 --- !u!1 &210638471870344640
 GameObject:
   m_ObjectHideFlags: 0
