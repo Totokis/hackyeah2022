@@ -27,6 +27,7 @@ public class MainTable : MonoBehaviour, IInteractionTarget
         else
         {
             newProduct.transform.localScale = new Vector3(1f, 1f, 1f);
+            newProduct.transform.rotation = new Quaternion(0, 0, 0, 0);
         }
 
         newProduct.transform.localPosition = new Vector3(0, 0, 0);
