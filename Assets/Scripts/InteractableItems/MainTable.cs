@@ -36,4 +36,14 @@ public class MainTable : MonoBehaviour, IInteractionTarget//(y)
         SOProducts.Add(soProduct);
     }
 
+    public static void OnGiveOrder()
+    {
+        Products = new List<GameObject>();
+        SOProducts = new List<SOProduct>();
+        //foreach(var placeholder in //ItemPlaceholders)
+        //{
+        //    foreach (Transform child in placeholder.transform)
+        //        Destroy(child.gameObject);
+        //}
+    }
 }
