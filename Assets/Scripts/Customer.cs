@@ -63,7 +63,7 @@ namespace Assets.Scripts
                 }
             }
 
-            var task = Task.Run(async () => await YiellQuotes(quotes.ToArray()));
+            YiellQuotes(quotes.ToArray());
 
             //var result = task.Run();
             // StartCoroutine(Annoyed1());
