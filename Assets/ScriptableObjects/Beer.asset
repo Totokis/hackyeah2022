@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Beer
   m_EditorClassIdentifier: 
   Name: Beer
-  Prefab: {fileID: 4216362761847224839, guid: 902c1d54a28654da0916dca75160be49, type: 3}
+  Prefab: {fileID: 2542527961062890933, guid: 73970a6e46364446e9569765574e47a0, type: 3}
   PrefabInHand: {fileID: 2833037878224827949, guid: 32c008adefc554d4e9c898208450b091, type: 3}
   Audio: 
