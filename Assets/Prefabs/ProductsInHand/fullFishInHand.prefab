@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3178178338520919191}
   m_Layer: 0
-  m_Name: fiszkawRece
+  m_Name: fullFishInHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
