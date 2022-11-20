@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MainTable : MonoBehaviour, IInteractionTarget
 {
-    private List<GameObject> Products = new List<GameObject>();
-    private List<SOProduct> SOProducts = new List<SOProduct>();
+    private static List<GameObject> Products = new List<GameObject>();
+    public static List<SOProduct> SOProducts { get; set; } = new List<SOProduct>();
     public GameObject[] ItemPlaceholders;
     public void Interact()
     {

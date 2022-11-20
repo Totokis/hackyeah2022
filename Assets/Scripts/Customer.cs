@@ -9,7 +9,7 @@ using UnityEngine.Events;
 
 namespace Assets.Scripts
 {
-    public class Customer : MonoBehaviour, INPCReference
+    public class Customer : MonoBehaviour, INPCReference, IInteractionTarget, IInteractionTargetG
     {
         public SOProduct[] RequestedProducts { get; private set; }
         public SOProductGroup AllProducts { get; private set; }
@@ -82,6 +82,17 @@ namespace Assets.Scripts
         public void Init(NPC npc)
         {
             this.NPC = npc;
+        }
+
+        public void Interact()
+        {
+            //tutaj podaje info o tym co chce
+        }
+
+        public void InteractG()
+        {
+            SOProduct[] givenProducts = MainTable.SOProducts.ToArray();
+            OnGotOrder(givenProducts);
         }
     }
 }
