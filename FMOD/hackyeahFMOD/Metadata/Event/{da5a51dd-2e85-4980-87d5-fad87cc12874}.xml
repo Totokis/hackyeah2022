@@ -112,7 +112,7 @@
 	</object>
 	<object class="MultiSound" id="{fe2c292e-bef7-4ed1-83ed-74aafa906dcd}">
 		<property name="length">
-			<value>2.8000000000000003</value>
+			<value>1.2000000000000002</value>
 		</property>
 		<relationship name="automators">
 			<destination>{920a8401-8ffb-48d4-a28c-97df5e866ad3}</destination>
