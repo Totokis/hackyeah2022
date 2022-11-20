@@ -91,6 +91,7 @@ namespace Assets.Scripts
 
         public void InteractG()
         {
+            Debug.Log("G interact!");
             SOProduct[] givenProducts = MainTable.SOProducts.ToArray();
             OnGotOrder(givenProducts);
         }
