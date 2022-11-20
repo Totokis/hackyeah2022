@@ -60,15 +60,16 @@ public class NPCMovement : MonoBehaviour, INPCReference
     }
 
     private void Update()
-    {
+    {        
+        float angle = Vector3.SignedAngle(agent.velocity.normalized, agent.desiredVelocity.normalized, transform.up);
+        _characterAnimator.UpdateAnimator(transform.InverseTransformDirection(agent.velocity), angle);
+
         if (npc.State != NPCState.movement)
             return;
 
-        var direction = (targetPosition - transform.position).normalized;
-        transform.forward = Vector3.Lerp(transform.forward, direction, Time.deltaTime * rotateSpeed);
+        //var direction = (targetPosition - transform.position).normalized;
+        //transform.forward = Vector3.Lerp(transform.forward, direction, Time.deltaTime * rotateSpeed);
 
-        //TODO - OGARNIJ KURWA KTÓRA TO BYŁA OŚ XD
-        //float angle = Vector3.SignedAngle(agent.velocity.normalized, agent.desiredVelocity.normalized,)
-        _characterAnimator.UpdateAnimator(transform.InverseTransformDirection(agent.velocity), 0);
+
     }
 }

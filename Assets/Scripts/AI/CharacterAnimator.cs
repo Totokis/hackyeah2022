@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 public class CharacterAnimator : MonoBehaviour
 {
     private Animator _animator;
-    private float _dampTime = 0.0f;
+    private float _dampTime = 0.5f;
 
     private Renderer [] _meshes;
 
