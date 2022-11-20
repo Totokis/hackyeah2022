@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using Cysharp.Threading.Tasks;
 
 namespace Assets.Scripts
 {
@@ -72,7 +73,7 @@ namespace Assets.Scripts
             StartCoroutine(TimePasses());
         }
 
-        public async Task YiellQuotes(QuoteType[] quotes)
+        public async UniTask YiellQuotes(QuoteType[] quotes)
         {
             foreach (var quote in quotes)
                 await NPC.MandingoController.PlayQuote(quote);
