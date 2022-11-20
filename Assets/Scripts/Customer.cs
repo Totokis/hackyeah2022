@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-using Cysharp.Threading.Tasks;
 
 namespace Assets.Scripts
 {
@@ -63,14 +62,17 @@ namespace Assets.Scripts
                 }
             }
 
-            //var task = Task.Run(async () => await YiellQuotes(quotes.ToArray()));
-            YiellQuotes((quotes.ToArray()));
-            //var result = task.Run();
+            var task = Task.Run(async () => await YiellQuotes(quotes.ToArray()));
 
+            //var result = task.Run();
+            StartCoroutine(Annoyed1());
+            StartCoroutine(Annoyed2());
+            StartCoroutine(Annoyed3());
+            StartCoroutine(Annoyed4());
             StartCoroutine(TimePasses());
         }
 
-        public async UniTask YiellQuotes(QuoteType[] quotes)
+        public async Task YiellQuotes(QuoteType[] quotes)
         {
             foreach (var quote in quotes)
                 await NPC.MandingoController.PlayQuote(quote);
@@ -99,6 +101,30 @@ namespace Assets.Scripts
             Leave();
         }
 
+        private IEnumerator Annoyed1()
+        {
+            yield return new WaitForSeconds(15f);
+            Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.Eee}));
+        }
+
+        private IEnumerator Annoyed2()
+        {
+            yield return new WaitForSeconds(25f);
+            Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.Eee }));
+        }
+
+        private IEnumerator Annoyed3()
+        {
+            yield return new WaitForSeconds(40f);
+            Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.GdzieMojeZamowienieKurwiu }));
+        }
+
+        private IEnumerator Annoyed4()
+        {
+            yield return new WaitForSeconds(50f);
+            Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.GdzieMojeZamowienieKurwiu }));
+        }
+
         private void Leave()
         {
             Debug.Log("Customer leaves");
@@ -109,7 +135,7 @@ namespace Assets.Scripts
         {
             if (products.Length != RequestedProducts.Length)
             {
-                Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.Eee }));
+                Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.GdzieMojeZamowienieKurwiu }));
                 OnFinish.Invoke(false);
             }
             else
