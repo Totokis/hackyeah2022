@@ -93,6 +93,8 @@ namespace Assets.Scripts
                 yield return new WaitForSeconds(1);
             }
 
+            Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.GdzieMojeZamowienieKurwiu })) ;
+
             Leave();
         }
 
@@ -105,18 +107,23 @@ namespace Assets.Scripts
         public void OnGotOrder(SOProduct[] products)
         {
             if (products.Length != RequestedProducts.Length)
+            {
+                Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.Eee }));
                 OnFinish.Invoke(false);
+            }
             else
             {
                 foreach (var potentialProduct in AllProducts.Products)
                 {
                     if (products.Where(pro => pro == potentialProduct).ToArray().Length != RequestedProducts.Where(pro => pro == potentialProduct).ToArray().Length)
                     {
+                        Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.GdzieMojeZamowienieKurwiu }));
                         OnFinish.Invoke(false);
                         return;
                     }
                 }
 
+                Task.Run(async () => await YiellQuotes(new QuoteType[] { QuoteType.Dziekowac }));
                 OnFinish.Invoke(true);
             }
         }
