@@ -141,6 +141,11 @@ namespace FMODUnity
                 return;
             }
 
+            if(hasTriggered)
+{
+                Lookup();
+            }
+
             cachedParams.Clear();
 
             if (!eventDescription.isValid())
