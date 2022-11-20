@@ -12,7 +12,7 @@ public class ScaleOnHover : MonoBehaviour, IInteractionHover
     [SerializeField] private float time = 0.1f;
 
     public void OnHoverEnter()
-    {
+    {   
         LeanTween.cancel(gameObject);
         LeanTween.scale(gameObject, enterScale, time);
     }

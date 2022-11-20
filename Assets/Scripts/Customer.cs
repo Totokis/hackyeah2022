@@ -25,7 +25,7 @@ namespace Assets.Scripts
         private void Start()
         {
             RequestedProducts = OrderManager.Instance.GetOrder();
-            //Orders.ShowOrders(RequestedProducts);
+                //Orders.ShowOrders(RequestedProducts);
 
             RemainingTime = 60f;
 
@@ -40,7 +40,17 @@ namespace Assets.Scripts
         public void OnStartWaiting(Action<Boolean> onFinish)
         {
             OnFinish = onFinish;
+
+            PrintAllOrders();
+
             StartCoroutine(TimePasses());
+        }
+        private void PrintAllOrders()
+        {
+            foreach (var order in RequestedProducts)
+            {
+                print($"I want: {order.name}");
+            }
         }
 
         private IEnumerator TimePasses()
