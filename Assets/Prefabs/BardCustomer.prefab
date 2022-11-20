@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5129539672636501955}
   - component: {fileID: 1390317347603424680}
   m_Layer: 0
-  m_Name: CustomerGit_2 1
+  m_Name: BardCustomer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
