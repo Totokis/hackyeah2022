@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
 
     public Customer Customer;
     public NPCMovement Movement { get; private set; }
+    public MandingoController MandingoController { get; private set; }
 
     public NPCState State { get; private set; } = NPCState.available;
 
@@ -17,6 +18,7 @@ public class NPC : MonoBehaviour
     {
         Customer = GetReference<Customer>();
         Movement = GetReference<NPCMovement>();
+        MandingoController = GetComponent<MandingoController>();
     }
 
     private T GetReference<T>() where T : INPCReference
