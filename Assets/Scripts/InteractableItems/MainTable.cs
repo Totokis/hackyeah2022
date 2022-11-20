@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainTable : MonoBehaviour, IInteractionTarget
+public class MainTable : MonoBehaviour, IInteractionTarget//(y)
 {
     private static List<GameObject> Products = new List<GameObject>();
     public static List<SOProduct> SOProducts { get; set; } = new List<SOProduct>();
@@ -19,7 +19,7 @@ public class MainTable : MonoBehaviour, IInteractionTarget
 
     private void PutItemOnTable(SOProduct soProduct)
     {
-        GameObject newProduct = Instantiate(soProduct.Prefab, new Vector3(0, 0, 0), Quaternion.identity, ItemPlaceholders[Products.Count].transform);
+        GameObject newProduct = Instantiate(soProduct.Prefab, new Vector3(1000, 1000, 10000), Quaternion.identity, ItemPlaceholders[Products.Count].transform);
         if (soProduct.Name == "Fish" || soProduct.Name == "FishFull")
         {
             newProduct.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);

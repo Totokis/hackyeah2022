@@ -46,7 +46,7 @@ public class SubtitlesController : MonoBehaviour
                     .setOnComplete(() =>
                     {
 
-                        LeanTween.delayedCall(2.5f, () =>
+                        LeanTween.delayedCall(1.55f, () =>
                         {
                             LeanTween.value(1f, 0f, 1.5f)
                                         .setOnUpdate((Single val) =>
@@ -79,7 +79,7 @@ public class SubtitlesController : MonoBehaviour
             .setOnComplete(() =>
             {
 
-                LeanTween.delayedCall(2.5f, () =>
+                LeanTween.delayedCall(1.55f, () =>
                 {
                     LeanTween.value(1f, 0f, 1.5f)
                                 .setOnUpdate((Single val) =>

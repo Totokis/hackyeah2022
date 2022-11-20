@@ -45,6 +45,6 @@ Material:
     - _FlameShape: 5.73
     - _YStretch: 1.25
     m_Colors:
-    - _Color: {r: 0.122641504, g: 0.019283256, b: 0.0063634748, a: 0}
+    - _Color: {r: 1, g: 0.15690264, b: 0, a: 0}
     - _NoiseScale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
