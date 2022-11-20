@@ -43,8 +43,40 @@ namespace Assets.Scripts
 
             PrintAllOrders();
 
+            List<QuoteType> quotes = new List<QuoteType>();
+            quotes.Add(QuoteType.Witanko);
+            quotes.Add(QuoteType.Poprosze);
+            foreach (SOProduct reqProduct in RequestedProducts)
+            {
+                switch (reqProduct.Name)
+                {
+                    case "Ryba":
+                        quotes.Add(QuoteType.Ryba);
+                        break;
+                    case "Wino":
+                        quotes.Add(QuoteType.Wino);
+                        break;
+                    case "Piwo":
+                        quotes.Add(QuoteType.Piwo);
+                        break;
+                }
+            }
+
+            var task = Task.Run(async () => await YiellQuotes(quotes.ToArray()));
+
+            //var result = task.Run();
+
             StartCoroutine(TimePasses());
         }
+
+        public async Task YiellQuotes(QuoteType[] quotes)
+        {
+            foreach (var quote in quotes)
+                await NPC.MandingoController.PlayQuote(quote);
+
+            return;
+        }
+
         private void PrintAllOrders()
         {
             foreach (var order in RequestedProducts)
