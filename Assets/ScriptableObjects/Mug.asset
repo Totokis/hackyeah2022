@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8111390955904c140be45d211a44a53b, type: 3}
   m_Name: Mug
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 8621284679036360399, guid: 3ca0bcc4c412444d296630fcd17378ed, type: 3}
+  PrefabInHand: {fileID: 2833037878224827949, guid: 80fb28456d923a54f8434dc25e3be859, type: 3}
   Audio: 
