@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8111390955904c140be45d211a44a53b, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
+  Name: Fish
   Prefab: {fileID: 2771585752419588838, guid: 66f5b070428bbe0479c7ae7ccf26636f, type: 3}
   PrefabInHand: {fileID: 2833037878224827949, guid: e69602ad4ed866648971deb150cf81e9, type: 3}
   Audio: 
