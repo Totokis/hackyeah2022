@@ -98,7 +98,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{92c34030-3dd2-4dd3-a65d-54d5dd3a4ead}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-15.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -131,7 +131,10 @@
 	<object class="MixerBusFader" id="{34fc6385-67a9-4ad9-8eed-9870ec766cfa}" />
 	<object class="ThreeEQEffect" id="{bee81b6a-6f49-4877-b88b-e781a3a7e481}">
 		<property name="lowGain">
-			<value>-2</value>
+			<value>-9.5</value>
+		</property>
+		<property name="highGain">
+			<value>2</value>
 		</property>
 	</object>
 </objects>
