@@ -5,10 +5,23 @@ using UnityEngine;
 
 public class MainTable : MonoBehaviour, IInteractionTarget
 {
-    public List<SOProduct> Products;
+    private List<GameObject> Products = new List<GameObject>();
+    private List<SOProduct> SOProducts = new List<SOProduct>();
+    public GameObject[] ItemPlaceholders;
     public void Interact()
     {
-        if(PlayerManager.Instance.ProductInHand != null)
+        if(PlayerManager.Instance.ProductInHand != null && Products.Count < 5)
+        {
+            PutItemOnTable(PlayerManager.Instance.ProductInHand);
             PlayerManager.Instance.ProductInHand = null;
+        }
     }
+
+    private void PutItemOnTable(SOProduct soProduct)
+    {//000
+        //skala
+        Products.Add(Instantiate(soProduct.PrefabInHand, new Vector3(0, 0, 0), Quaternion.identity, ItemPlaceholders[Products.Count].transform));
+        SOProducts.Add(soProduct);
+    }
+
 }
