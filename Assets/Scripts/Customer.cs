@@ -72,7 +72,7 @@ namespace Assets.Scripts
             StartCoroutine(TimePasses());
         }
 
-        public async Task YiellQuotes(QuoteType[] quotes)
+        public async UniTask YiellQuotes(QuoteType[] quotes)
         {
             foreach (var quote in quotes)
                 await NPC.MandingoController.PlayQuote(quote);
