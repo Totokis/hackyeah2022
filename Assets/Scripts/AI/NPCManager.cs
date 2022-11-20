@@ -14,7 +14,7 @@ public class NPCManager : MonoBehaviour
     {
         Instance = this;
 
-        allNPCs = spawner.Spawn(10);
+        allNPCs = spawner.Spawn(30);
     }
 
     public NPC GetNPCWithState(NPCState state)
