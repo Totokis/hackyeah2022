@@ -66,10 +66,10 @@ namespace Assets.Scripts
             var task = Task.Run(async () => await YiellQuotes(quotes.ToArray()));
 
             //var result = task.Run();
-            StartCoroutine(Annoyed1());
-            StartCoroutine(Annoyed2());
-            StartCoroutine(Annoyed3());
-            StartCoroutine(Annoyed4());
+            // StartCoroutine(Annoyed1());
+            // StartCoroutine(Annoyed2());
+            // StartCoroutine(Annoyed3());
+            // StartCoroutine(Annoyed4());
             StartCoroutine(TimePasses());
         }
 
