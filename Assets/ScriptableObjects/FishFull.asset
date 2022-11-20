@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8111390955904c140be45d211a44a53b, type: 3}
   m_Name: FishFull
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 2833037878224827949, guid: 7520580e2192bb2429007922b2881238, type: 3}
   PrefabInHand: {fileID: 2833037878224827949, guid: 7520580e2192bb2429007922b2881238, type: 3}
   Audio: 

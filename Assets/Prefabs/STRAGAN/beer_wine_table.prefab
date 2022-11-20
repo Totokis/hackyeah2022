@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fba8b708ff9ab4a9ae286ce46fecdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soMug: {fileID: 0}
+  soMug: {fileID: 11400000, guid: 4b22ffec92da9a540bba6fda199bd97e, type: 2}
 --- !u!65 &978146343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -525,8 +525,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0041610757, y: 0.005163941, z: 0.0046871654}
-  m_Center: {x: -0.000085606014, y: 0.00036141145, z: 0.00013172251}
+  m_Size: {x: 0.006413212, y: 0.009587298, z: 0.00659439}
+  m_Center: {x: 0.000000315015, y: -0.0004740273, z: 0.0010853349}
 --- !u!1 &2418735185328175173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1257,8 @@ GameObject:
   - component: {fileID: 143015865757867514}
   - component: {fileID: 8528877833200167739}
   - component: {fileID: 3371767188137629208}
+  - component: {fileID: 1478263471}
+  - component: {fileID: 1478263470}
   m_Layer: 0
   m_Name: Wooden barrel and mug.003
   m_TagString: Untagged
@@ -1330,6 +1332,33 @@ MeshRenderer:
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &3371767188137629208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697004880533952550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f9f24644066a344b61d7eae1124453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soMug: {fileID: 11400000, guid: 4b22ffec92da9a540bba6fda199bd97e, type: 2}
+  soBeer: {fileID: 11400000, guid: b08a35d81853cdc48aa39adc47bbefba, type: 2}
+--- !u!65 &1478263471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697004880533952550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020257246, y: 0.017149977, z: 0.01713512}
+  m_Center: {x: -0.00035772103, y: 0.000036357866, z: -0.00003950157}
+--- !u!114 &1478263470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1772,6 +1801,7 @@ GameObject:
   - component: {fileID: 6456413793997613068}
   - component: {fileID: 7711665129544848126}
   - component: {fileID: 3371767188137629207}
+  - component: {fileID: 1449458043}
   m_Layer: 0
   m_Name: Wooden barrel and mug.011
   m_TagString: Untagged
@@ -1858,3 +1888,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soMug: {fileID: 11400000, guid: 4b22ffec92da9a540bba6fda199bd97e, type: 2}
   soWine: {fileID: 11400000, guid: 53e8af8d71770e140a63fc5300745157, type: 2}
+--- !u!65 &1449458043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9107460203122339671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023622971, y: 0.022106556, z: 0.01713512}
+  m_Center: {x: 0.0000765645, y: 0.00006405357, z: -0.000039463386}
