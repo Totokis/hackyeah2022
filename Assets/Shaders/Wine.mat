@@ -21,16 +21,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wine
-  m_Shader: {fileID: -6465566751694194690, guid: 45759c2c7642f488fbb275c587083317, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 2100000, guid: 6a9d5a01ce1a04420adbb15cbde57939, type: 2}
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -38,11 +40,11 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
-    - _Fill: 0.16
-    - _WobbleX: 0
-    - _WobbleZ: 0
+    - _DstBlend: 10
+    - _Glossiness: 0.789
+    - _Metallic: 0.692
+    - _Mode: 3
+    - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.20754719, g: 0.047774054, b: 0.014684941, a: 0}
+    - _Color: {r: 0.44339618, g: 0.087222986, b: 0.010457456, a: 0.59607846}
   m_BuildTextureStacks: []
