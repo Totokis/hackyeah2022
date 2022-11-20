@@ -86,12 +86,13 @@ namespace Assets.Scripts
 
         public void Interact()
         {
-            //tutaj info o tym co chce
+            //tutaj podaje info o tym co chce
         }
 
         public void InteractG()
         {
-            //tutaj oddanie requesta
+            SOProduct[] givenProducts = MainTable.SOProducts.ToArray();
+            OnGotOrder(givenProducts);
         }
     }
 }
