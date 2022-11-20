@@ -11,6 +11,11 @@ public class FishTable : MonoBehaviour, IInteractionTarget
     {
         Debug.Log("Dotkniêto fisztable");
         if (PlayerManager.Instance.ProductInHand == soFullFish)
+        {
+            Debug.Log("Full fish");
             PlayerManager.Instance.ProductInHand = soFish;
+        }
+        else
+            Debug.Log("Not full fish");
     }
 }

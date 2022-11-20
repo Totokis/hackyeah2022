@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3178178338520919191}
   m_Layer: 0
-  m_Name: "piwkoWR\u0119ce"
+  m_Name: beerInHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
