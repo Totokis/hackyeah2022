@@ -78,33 +78,33 @@ public class MandingoController : MonoBehaviour
         PlayingQuote = false;
     }
 
-    public void PlayQuote(QuoteType type)
+    public async UniTask PlayQuote(QuoteType type)
     {
         switch(type)
         {
             case QuoteType.Witanko:
-                PlayEvent(_serwus);
+                await PlayEvent(_serwus);
                 break;
             case QuoteType.Poprosze:
-                PlayEvent(_proschem);
+                await PlayEvent(_proschem);
                 break;
             case QuoteType.Piwo:
-                PlayEvent(_pivo);
+                await PlayEvent(_pivo);
                 break;
             case QuoteType.Wino:
-                PlayEvent(_vino);
+                await PlayEvent(_vino);
                 break;
             case QuoteType.Ryba:
-                PlayEvent(_riba);
+                await PlayEvent(_riba);
                 break;
             case QuoteType.GdzieMojeZamowienieKurwiu:
-                PlayEvent(_dzie);
+                await PlayEvent(_dzie);
                 break;
             case QuoteType.Eee:
-                PlayEvent(_eee);
+                await PlayEvent(_eee);
                 break;            
             case QuoteType.Dziekowac:
-                PlayEvent(_thx);
+                await PlayEvent(_thx);
                 break;
         }
     }
