@@ -21,18 +21,23 @@ public class PlayerInventory : MonoBehaviour
     public void SetProductInHands(SOProduct product)
     {
         if (ProductInScene != null)
+        {
             Destroy(ProductInScene);
+            ProductInScene = null;
+        }
 
         ProductInHands = product;
         OnProductInHandsChanged?.Invoke(product);
 
-        ProductInScene = Instantiate(product.PrefabInHand, trItemInHandParent);
-
-        for (int i = 0; i < ProductInScene.transform.childCount; i++)
+        if (ProductInHands != null)
         {
-            Transform Go = ProductInScene.transform.GetChild(i);
-            Go.gameObject.layer = LayerMask.NameToLayer("ItemInHand");
-        }
+            ProductInScene = Instantiate(product.PrefabInHand, trItemInHandParent);
 
+            for (int i = 0; i < ProductInScene.transform.childCount; i++)
+            {
+                Transform Go = ProductInScene.transform.GetChild(i);
+                Go.gameObject.layer = LayerMask.NameToLayer("ItemInHand");
+            }
+        }
     }
 }

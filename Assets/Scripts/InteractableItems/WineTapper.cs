@@ -9,7 +9,6 @@ public class WineTapper : MonoBehaviour, IInteractionTarget
     [SerializeField] private SOProduct soWine;
     public void Interact()
     {
-        Debug.Log("Dotkniêto wino");
         if (PlayerManager.Instance.ProductInHand == soMug)
             PlayerManager.Instance.ProductInHand = soWine;
     }
