@@ -19,9 +19,18 @@ public class MainTable : MonoBehaviour, IInteractionTarget
 
     private void PutItemOnTable(SOProduct soProduct)
     {
-        GameObject newProduct = Instantiate(soProduct.PrefabInHand, new Vector3(0, 0, 0), Quaternion.identity, ItemPlaceholders[Products.Count].transform);
-        newProduct.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        GameObject newProduct = Instantiate(soProduct.Prefab, new Vector3(0, 0, 0), Quaternion.identity, ItemPlaceholders[Products.Count].transform);
+        if (soProduct.Name == "Fish" || soProduct.Name == "FishFull")
+        {
+            newProduct.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        }
+        else
+        {
+            newProduct.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
         newProduct.transform.localPosition = new Vector3(0, 0, 0);
+
         Products.Add(newProduct);
         SOProducts.Add(soProduct);
     }
