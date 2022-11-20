@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 207096183867011163}
   - component: {fileID: 207096183867011164}
   - component: {fileID: 207096183867011165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ Transform:
   m_Children:
   - {fileID: 207096183867011166}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &388461524334500751
 MeshFilter:
