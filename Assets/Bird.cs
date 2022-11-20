@@ -11,8 +11,10 @@ public class Bird : MonoBehaviour
     private List<Vector3> _pathFinal = new List<Vector3>();
 
     // Start is called before the first frame update
+    Single _initialRot;
     void Start()
     {
+        _initialRot = transform.localEulerAngles.x;
         if (trPath == null || trPath.Length == 0)
         {
             Debug.LogError($"Zwierz¹tko {name} ni ma trasy ruszania sie");
@@ -71,6 +73,6 @@ public class Bird : MonoBehaviour
             transform.forward = newForward;
         }
         _lastFrame = transform.position;
-
+        transform.localEulerAngles = new Vector3(_initialRot, transform.localEulerAngles.y, transform.localEulerAngles.z);
     }
 }

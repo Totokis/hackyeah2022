@@ -9,6 +9,15 @@ public class Waypoint : MonoBehaviour
 
     public NPC Owner { get; private set; }
 
+    private void Start()
+    {
+        if (GetComponent<MeshRenderer>())
+            GameObject.Destroy(GetComponent<MeshRenderer>());
+        if (GetComponent<MeshFilter>())
+            GameObject.Destroy(GetComponent<MeshFilter>());
+
+    }
+
     public void SetOwner(NPC owner)
     {
         Owner = owner;
