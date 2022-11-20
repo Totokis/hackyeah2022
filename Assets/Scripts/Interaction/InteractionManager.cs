@@ -29,15 +29,16 @@ public class InteractionManager : MonoBehaviour
                     hovers = hit.transform.GetComponents<IInteractionHover>();
                     CallOnHoverEnter();
                 }
+
+                if (Keyboard.current.eKey.wasPressedThisFrame)
+                {
+                    target.Interact();
+                }
             }
+
+            //G
             if (hit.transform.TryGetComponent<IInteractionTargetG>(out var newTargetG))
             {
-                //G
-                if (Keyboard.current.gKey.wasPressedThisFrame)
-                {
-                    targetG.InteractG();
-                }
-
                 if (targetG != newTargetG)
                 {
                     //CallOnHoverExit();
@@ -53,6 +54,8 @@ public class InteractionManager : MonoBehaviour
                     targetG.InteractG();
                 }
             }
+            //END G
+
             else
             {
                 Clear();
