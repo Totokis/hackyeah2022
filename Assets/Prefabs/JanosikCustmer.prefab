@@ -367,7 +367,8 @@ GameObject:
   - component: {fileID: 1087812268142367685}
   - component: {fileID: 8941628524454648315}
   - component: {fileID: 7149377450182044017}
-  - component: {fileID: 443890659702637142}
+  - component: {fileID: 4800400626546721019}
+  - component: {fileID: 2564947672375436424}
   m_Layer: 0
   m_Name: JanosikCustmer
   m_TagString: Untagged
@@ -984,7 +985,7 @@ MonoBehaviour:
   spineBend: 2
   spineSpeed: 3
   spine: []
---- !u!114 &443890659702637142
+--- !u!114 &4800400626546721019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -996,13 +997,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5929ac9283ecd4335a65e73521dddaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hiEvent:
+  _serwus: {fileID: 11400000, guid: ecc12cb33e5dbd14895075a432b92cf6, type: 2}
+  _proschem: {fileID: 11400000, guid: 5c832ef8e3baa4440b7633a63bb821fc, type: 2}
+  _pivo: {fileID: 11400000, guid: 22465f246e9878241a6c60c53d9c4fea, type: 2}
+  _vino: {fileID: 11400000, guid: 7e986db26a8b82b42b28e795011dfe8c, type: 2}
+  _riba: {fileID: 11400000, guid: acd35d87fe9010c4baddca89a2060206, type: 2}
+  _dzie: {fileID: 11400000, guid: fed63faaf68d0a64483d308f4474fb6c, type: 2}
+  _eee: {fileID: 11400000, guid: eccd4e4b9b1724d4b8a08b6bcff4e5b8, type: 2}
+  _thx: {fileID: 11400000, guid: 9d0c782a455b7f24ab78e4f9d9cebde8, type: 2}
+--- !u!114 &2564947672375436424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614705570106370055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
     Guid:
-      Data1: -1535599381
-      Data2: 1245405142
-      Data3: -1204168786
-      Data4: 629785358
-    Path: event:/NPC1/NPC1_1Przywitanko
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &2647642900166858656
 GameObject:
   m_ObjectHideFlags: 0
