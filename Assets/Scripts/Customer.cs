@@ -101,12 +101,14 @@ namespace Assets.Scripts
 
         public void InteractG()
         {
-            if(OnFinish != null)
+            if (OnFinish != null)
             {
                 SOProduct[] givenProducts = MainTable.SOProducts.ToArray();
                 OnGotOrder(givenProducts);
                 MainTable.OnGiveOrder();
             }
+            else
+                Debug.Log("Customer is not waiting yet!");
         }
     }
 }
