@@ -40,10 +40,11 @@ public class MainTable : MonoBehaviour, IInteractionTarget//(y)
     {
         Products = new List<GameObject>();
         SOProducts = new List<SOProduct>();
-        //foreach(var placeholder in //ItemPlaceholders)
-        //{
-        //    foreach (Transform child in placeholder.transform)
-        //        Destroy(child.gameObject);
-        //}
+        GameObject nonStaticObject = GameObject.Find("Cube.003");
+        foreach (var placeholder in nonStaticObject.GetComponent<MainTable>().ItemPlaceholders)
+        {
+            foreach (Transform child in placeholder.transform)
+                Destroy(child.gameObject);
+        }
     }
 }
