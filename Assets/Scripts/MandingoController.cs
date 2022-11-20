@@ -26,6 +26,8 @@ public class MandingoController : MonoBehaviour
 
     private StudioEventEmitter _emitter;
 
+    public bool PlayingQuote { get; private set; } = false;
+
     [EasyButtons.Button]
     private void GetJapa()
     {
@@ -35,7 +37,7 @@ public class MandingoController : MonoBehaviour
     private void Start()
     {
         _emitter = GetComponent<StudioEventEmitter>();
-        Test();
+        //Test();
     }
 
     private void Update()
@@ -64,10 +66,58 @@ public class MandingoController : MonoBehaviour
 
     public async UniTask PlayEvent(MandingoData data)
     {
+        if (PlayingQuote) return;
+
+        PlayingQuote = true;
+
         _emitter.Stop();
         _emitter.EventReference = data.EventReference;
         _emitter.Play();
 
         await UniTask.Delay(Random.Range(data.Duration, data.Duration * 2) );
+        PlayingQuote = false;
     }
+
+    public void PlayQuote(QuoteType type)
+    {
+        switch(type)
+        {
+            case QuoteType.Witanko:
+                PlayEvent(_serwus);
+                break;
+            case QuoteType.Poprosze:
+                PlayEvent(_proschem);
+                break;
+            case QuoteType.Piwo:
+                PlayEvent(_pivo);
+                break;
+            case QuoteType.Wino:
+                PlayEvent(_vino);
+                break;
+            case QuoteType.Ryba:
+                PlayEvent(_riba);
+                break;
+            case QuoteType.GdzieMojeZamowienieKurwiu:
+                PlayEvent(_dzie);
+                break;
+            case QuoteType.Eee:
+                PlayEvent(_eee);
+                break;            
+            case QuoteType.Dziekowac:
+                PlayEvent(_thx);
+                break;
+        }
+    }
+}
+
+public enum QuoteType
+{
+    Witanko,
+    Poprosze,
+    Piwo,
+    Wino,
+    Ryba,
+    GdzieMojeZamowienieKurwiu,
+    Eee,
+    Dziekowac,
 }
