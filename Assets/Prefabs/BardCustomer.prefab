@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 3098712596165711223}
   - component: {fileID: 6345415789311614793}
   - component: {fileID: 5129539672636501955}
-  - component: {fileID: 1390317347603424680}
   m_Layer: 0
   m_Name: BardCustomer
   m_TagString: Untagged
@@ -54,7 +53,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 968de3e248a99f64e8e6631c2823b553, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -125,7 +124,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -634,20 +633,6 @@ MonoBehaviour:
   spineBend: 2
   spineSpeed: 3
   spine: []
---- !u!114 &1390317347603424680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22857824704966325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba3058a474e23145a75ea19d5d4baa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _agent: {fileID: 3098712596165711223}
-  _characterAnimator: {fileID: 6312789732843284430}
 --- !u!1 &107770981027024488
 GameObject:
   m_ObjectHideFlags: 0
