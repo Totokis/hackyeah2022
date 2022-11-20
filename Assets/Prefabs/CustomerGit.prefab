@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 1087812268142367685}
   - component: {fileID: 8941628524454648315}
   - component: {fileID: 7149377450182044017}
-  - component: {fileID: 3986564782373954330}
   m_Layer: 0
   m_Name: CustomerGit
   m_TagString: Untagged
@@ -54,7 +53,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 968de3e248a99f64e8e6631c2823b553, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -634,20 +633,6 @@ MonoBehaviour:
   spineBend: 2
   spineSpeed: 3
   spine: []
---- !u!114 &3986564782373954330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2614705570106370055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba3058a474e23145a75ea19d5d4baa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _agent: {fileID: 1087812268142367685}
-  _characterAnimator: {fileID: 8323761649279771004}
 --- !u!1001 &206182549184910141
 PrefabInstance:
   m_ObjectHideFlags: 0

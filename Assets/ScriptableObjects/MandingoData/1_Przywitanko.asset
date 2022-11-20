@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2fe7c46c3f1f641b67e87956aec02e, type: 3}
+  m_Name: 1_Przywitanko
+  m_EditorClassIdentifier: 
+  _event:
+    Guid:
+      Data1: -1535599381
+      Data2: 1245405142
+      Data3: -1204168786
+      Data4: 629785358
+    Path: event:/NPC1/NPC1_1Przywitanko
+  _duration: 1380
