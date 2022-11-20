@@ -3,14 +3,13 @@
 [System.Serializable]
 public class MinMaxVector3
 {
-    [field: SerializeField] public Vector3 Min;
-    [field: SerializeField] public Vector3 Max;
+    [field: SerializeField] public Transform Min;
+    [field: SerializeField] public Transform Max;
 
     public Vector3 Random()
     {
-        var x = UnityEngine.Random.Range(Min.x, Max.x);
-        var y = UnityEngine.Random.Range(Min.y, Max.y);
-        var z = UnityEngine.Random.Range(Min.z, Max.z);
-        return new Vector3(x, y, z);
+        var direction = (Max.position - Min.position).normalized;
+        var distance = Vector3.Distance(Min.position, Max.position);
+        return Min.position + direction * UnityEngine.Random.Range(0, distance);
     }
 }

@@ -20,7 +20,7 @@ public class NPCMovement : MonoBehaviour, INPCReference
         this.npc = npc;
 
         agent = GetComponent<NavMeshAgent>();
-        _characterAnimator= GetComponent<CharacterAnimator>();
+        _characterAnimator = GetComponent<CharacterAnimator>();
     }
 
 
@@ -69,6 +69,6 @@ public class NPCMovement : MonoBehaviour, INPCReference
 
         //TODO - OGARNIJ KURWA KTÓRA TO BYŁA OŚ XD
         //float angle = Vector3.SignedAngle(agent.velocity.normalized, agent.desiredVelocity.normalized,)
-        _characterAnimator.UpdateAnimator(transform.InverseTransformDirection(agent.velocity), 0);
+        //_characterAnimator.UpdateAnimator(transform.InverseTransformDirection(agent.velocity), 0);
     }
 }
