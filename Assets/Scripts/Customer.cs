@@ -50,13 +50,13 @@ namespace Assets.Scripts
             {
                 switch (reqProduct.Name)
                 {
-                    case "Ryba":
+                    case "Fish":
                         quotes.Add(QuoteType.Ryba);
                         break;
-                    case "Wino":
+                    case "Wine":
                         quotes.Add(QuoteType.Wino);
                         break;
-                    case "Piwo":
+                    case "Beer":
                         quotes.Add(QuoteType.Piwo);
                         break;
                 }
