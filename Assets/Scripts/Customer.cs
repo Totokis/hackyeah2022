@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using Cysharp.Threading.Tasks;
 
 namespace Assets.Scripts
 {
@@ -62,14 +63,14 @@ namespace Assets.Scripts
                 }
             }
 
-            var task = Task.Run(async () => await YiellQuotes(quotes.ToArray()));
-
+            //var task = Task.Run(async () => await YiellQuotes(quotes.ToArray()));
+            YiellQuotes((quotes.ToArray()));
             //var result = task.Run();
 
             StartCoroutine(TimePasses());
         }
 
-        public async Task YiellQuotes(QuoteType[] quotes)
+        public async UniTask YiellQuotes(QuoteType[] quotes)
         {
             foreach (var quote in quotes)
                 await NPC.MandingoController.PlayQuote(quote);

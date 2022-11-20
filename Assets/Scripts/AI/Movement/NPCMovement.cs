@@ -67,8 +67,8 @@ public class NPCMovement : MonoBehaviour, INPCReference
         if (npc.State != NPCState.movement)
             return;
 
-        //var direction = (targetPosition - transform.position).normalized;
-        //transform.forward = Vector3.Lerp(transform.forward, direction, Time.deltaTime * rotateSpeed);
+        var direction = (targetPosition - transform.position).normalized;
+        transform.forward = Vector3.Lerp(transform.forward, direction, Time.deltaTime * rotateSpeed);
 
 
     }
