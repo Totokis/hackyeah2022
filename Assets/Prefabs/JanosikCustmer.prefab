@@ -998,6 +998,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5929ac9283ecd4335a65e73521dddaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _japaToControl: {fileID: 3238013725663029312}
+  _maxJapaPositionOffset: 0.001
+  _maxJapaRotationOffset: 90
   _serwus: {fileID: 11400000, guid: ecc12cb33e5dbd14895075a432b92cf6, type: 2}
   _proschem: {fileID: 11400000, guid: 5c832ef8e3baa4440b7633a63bb821fc, type: 2}
   _pivo: {fileID: 11400000, guid: 22465f246e9878241a6c60c53d9c4fea, type: 2}
