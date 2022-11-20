@@ -64,7 +64,7 @@ namespace Assets.Scripts
             }
 
             YiellQuotes(quotes.ToArray());
-
+            ;
             //var result = task.Run();
             // StartCoroutine(Annoyed1());
             // StartCoroutine(Annoyed2());
